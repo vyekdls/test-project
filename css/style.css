@@ -1,0 +1,132 @@
+/* style.css */
+*{ 
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+a { text-decoration: none;}
+li { list-style-type: none;}
+body {
+  /* 기본 서체 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/*  
+  규격: 1000px
+  메뉴: 홈 |  패션  | 풍경  |  거리  |  소개
+*/
+/* 헤더 영역 */
+#main_header {
+  width: 1000px;
+  margin: 0 auto;
+  /* background: #ccc; */
+  border-bottom: 2px solid #000;
+  margin-top: 20px;
+}
+
+/* gnb(메인메뉴) */
+#gnb {
+  /* nav 부모에 고정 높이값 추가 */
+  position: relative;
+  width: 1000px; 
+  height: 34px; /* 높이값 */
+  margin: 0 auto;
+  background: #000;
+  margin-top: 10px;
+}
+
+#gnb > ul {
+  /* nav 안에서 absolute로 배치하여 아래 콘텐츠 영역이 밀리지 않도록 레이어링 */
+  position: absolute;
+  width: 100%; 
+  height: 34px;
+}
+#gnb > ul > li {
+  width: 20%;
+  /* outline: 1px solid red; */
+  float: left;
+  text-align: center;
+}
+#gnb > ul a { 
+  color: #fff;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition-duration: 0.5s;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+#gnb > ul a:hover {
+  color: #5695e1;
+}
+#gnb > ul .active { color: #5695e1;}
+
+/* 2단계 메뉴 hover 액션 */
+#gnb > ul .depth2 {
+  display: none;
+}
+#gnb > ul > li:hover .depth2 {
+  display: block;
+}
+
+#gnb > ul > li .depth2 > li{
+  background: #000;
+  margin-top: 5px;
+}
+
+
+/* 메인 비주얼(콘텐츠) */
+#content {
+  width: 1000px; 
+  height: 500px;
+  margin: 0 auto;
+  /* background: #ccc; */
+  overflow: hidden;
+}
+#content .left {
+  width: 500px;
+  float: left;
+}
+#content .right{
+  width: 500px;
+  float: right;
+}
+
+#content img { display: block;}
+
+#main_footer {
+  width: 1000px;
+  /* background: #ccc; */
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  border-top: 2px solid #000;
+  margin-top: 10px;
+}
+#main_footer .copy,
+#main_footer address,
+#main_footer .phone,
+#main_footer .sns {
+  float: left;
+}
+
+#main_footer .copy {
+  width: 380px;
+  margin-right: 30px;
+  /* outline: 1px solid red; */
+}
+#main_footer address {
+  /* outline: 1px solid red; */
+  margin-right: 110px;
+  font-style: normal;
+}
+#main_footer .sns { float: right;}
+#main_footer .sns .fa {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #000;
+}
+
+
